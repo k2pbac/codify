@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import list from "./list.json";
+import TodoList from "./TodoList";
+import { GoHomeFill } from "react-icons/go";
+import { HiChartBarSquare } from "react-icons/hi2";
+import { BsListTask } from "react-icons/bs";
+import { LuSettings } from "react-icons/lu";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="Todo">
+      <div className="side-panel">
+        <div className="logo">
+          <img src="./logo.png"></img>
+          <h1>Codify</h1>
+        </div>
+        <a href="/">
+          <GoHomeFill />
+          Home
         </a>
-      </header>
+        <a href="/">
+          <HiChartBarSquare />
+          Dashboard
+        </a>
+        <a href="/">
+          <BsListTask />
+          Tasks
+        </a>
+        <a href="/">
+          <LuSettings />
+          Settings
+        </a>
+      </div>
+      <div className="main-section"></div>
+      {/* <TodoList items={list}></TodoList> */}
     </div>
   );
 }
