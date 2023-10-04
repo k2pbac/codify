@@ -54,6 +54,7 @@ body {
 
 .main-section {
   display: flex;
+  flex-direction: column;
   width: 90%;
   height: 700px;
   max-height: fit-content;
@@ -65,4 +66,9 @@ body {
   gap: 30px;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+.main-section .content {
+  display: flex;
+  height: 600px;
 }

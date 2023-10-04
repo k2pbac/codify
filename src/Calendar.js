@@ -9,6 +9,13 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 const Calendar = (props) => {
   const { selectRange, ...rest } = props;
   const [value, onChange] = useState(new Date());
+
+  const date = new Date();
+  const day = date.getDay();
+  const month = date.toLocaleString("default", { month: "long" });
+  const year = date.getFullYear();
+  const dateString = month + " " + day + ", " + year;
+
   return (
     <div className="calendar">
       <div className="name">
@@ -16,6 +23,7 @@ const Calendar = (props) => {
         <p>Kris Bachan</p>
         <span>UI Designer and Founder</span>
       </div>
+      {/* <p>{dateString}</p> */}
       <CTemplate
         onChange={onChange}
         value={value}
