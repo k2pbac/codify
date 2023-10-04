@@ -26,10 +26,9 @@ body {
 }
 
 .side-panel a svg {
-  /* margin: 0 16px; */
   margin-right: 16px;
   margin-left: 10px;
-  font-size: 24px;
+  font-size: 40px;
   padding: 8px;
 }
 
@@ -65,8 +64,9 @@ body {
   max-height: fit-content;
   background-color: rgb(241, 245, 247);
   color: #10123f;
-  margin-right: 2px;
+  margin-right: 10px;
   margin-left: 50px;
+  margin-top: 10px;
   border-radius: 20px;
   gap: 30px;
   padding-top: 20px;

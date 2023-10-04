@@ -21,12 +21,14 @@
   overflow: hidden;
   max-width: 500px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 16px;
 }
 #search {
   border: none;
   width: 450px;
   font-size: 15px;
-  padding: 15px;
+  padding: 9px;
+  padding-left: 16px;
   color: black;
 }
 #search:focus {
@@ -39,8 +41,8 @@
 .search-icon,
 .bell-icon,
 .settings-icon {
-  padding: 16px;
   color: rgba(0, 0, 0, 0.564);
+  font-size: 18px;
 }
 
 #icon-wrapper {
@@ -48,4 +50,15 @@
   margin-left: 16px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 14px;
+}
+
+.page-link {
+  color: #3b3b34 !important;
+}
+
+.page-item.active .page-link {
+  background-color: #3b3b34 !important;
+  border-color: #3b3b34 !important;
+  color: white !important;
 }
