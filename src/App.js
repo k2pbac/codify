@@ -1,5 +1,7 @@
 import list from "./list.json";
 import TodoList from "./TodoList";
+import Calendar from "./Calendar";
+import SearchBar from "./SearchBar";
 import { GoHomeFill } from "react-icons/go";
 import { HiChartBarSquare } from "react-icons/hi2";
 import { BsListTask } from "react-icons/bs";
@@ -18,10 +20,6 @@ function App() {
           Home
         </a>
         <a href="/">
-          <HiChartBarSquare />
-          Dashboard
-        </a>
-        <a href="/">
           <BsListTask />
           Tasks
         </a>
@@ -30,8 +28,11 @@ function App() {
           Settings
         </a>
       </div>
-      <div className="main-section"></div>
-      {/* <TodoList items={list}></TodoList> */}
+      <div className="main-section">
+        <SearchBar />
+        <TodoList items={list}></TodoList>
+        <Calendar />
+      </div>
     </div>
   );
 }

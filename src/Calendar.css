@@ -1,0 +1,35 @@
+.calendar {
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 16px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 0.8;
+  grid-area: calendar;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.calendar svg {
+  font-size: 42px;
+}
+
+.calendar .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar .name p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.calendar .name span {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.4;
+}

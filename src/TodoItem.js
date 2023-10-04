@@ -1,7 +1,7 @@
 const TodoItem = ({ item }) => {
   return (
-    <div>
-      <p>{item.name}</p>
+    <div className="todo">
+      <span>{item.name}</span>
     </div>
   );
 };

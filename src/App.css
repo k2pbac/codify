@@ -1,6 +1,7 @@
 body {
   background-color: #10123f;
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 .side-panel {
@@ -13,16 +14,22 @@ body {
   all: unset;
   cursor: pointer;
   margin-bottom: 30px;
-  font-family: "Barlow", sans-serif;
-  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
-  width: 140px;
+  width: 190px;
+  margin-left: 5px;
+}
+
+.side-panel a:hover {
+  background-color: #d268f2cc;
+  border-radius: 10px;
 }
 
 .side-panel a svg {
-  margin-right: 24px;
-  font-size: 24px;
+  margin-right: 16px;
+  margin-left: 10px;
+  font-size: 40px;
+  padding: 8px;
 }
 
 .Todo {
@@ -34,8 +41,6 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: "Barlow", sans-serif;
-  font-family: "Montserrat", sans-serif;
   margin-bottom: 80px;
 }
 
@@ -43,15 +48,32 @@ body {
   width: 120px;
   height: 120px;
   margin-right: -30px;
+  margin-left: -15px;
 }
 
 .main-section {
+  display: grid;
+  grid-template-columns: 65% 32%;
+  grid-template-rows: 50px;
+  grid-template-areas:
+    "search calendar"
+    "list calendar"
+    "list calendar";
   width: 90%;
-  height: 770px;
+  height: 700px;
   max-height: fit-content;
   background-color: rgb(241, 245, 247);
-
-  margin-right: 2px;
+  color: #10123f;
+  margin-right: 10px;
   margin-left: 50px;
+  margin-top: 10px;
   border-radius: 20px;
+  gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.main-section .content {
+  display: flex;
+  height: 600px;
 }
