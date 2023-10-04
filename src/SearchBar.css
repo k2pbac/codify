@@ -4,6 +4,7 @@
   margin-left: 20px;
   width: 97%;
   border-radius: 10px;
+  grid-area: search;
 }
 
 .search-bar p {
@@ -35,7 +36,16 @@
   color: black;
   opacity: 0.3;
 }
-.search-icon {
-  margin: 16px;
+.search-icon,
+.bell-icon,
+.settings-icon {
+  padding: 16px;
   color: rgba(0, 0, 0, 0.564);
+}
+
+#icon-wrapper {
+  background-color: white;
+  margin-left: 16px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }

@@ -53,8 +53,13 @@ body {
 }
 
 .main-section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 65% 32%;
+  grid-template-rows: 50px;
+  grid-template-areas:
+    "search calendar"
+    "list calendar"
+    "list calendar";
   width: 90%;
   height: 700px;
   max-height: fit-content;

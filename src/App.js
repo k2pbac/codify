@@ -19,10 +19,6 @@ function App() {
           <GoHomeFill />
           Home
         </a>
-        {/* <a href="/">
-          <HiChartBarSquare />
-          Dashboard
-        </a> */}
         <a href="/">
           <BsListTask />
           Tasks
@@ -34,10 +30,8 @@ function App() {
       </div>
       <div className="main-section">
         <SearchBar />
-        <div className="content">
-          <TodoList items={list}></TodoList>
-          <Calendar />
-        </div>
+        <TodoList items={list}></TodoList>
+        <Calendar />
       </div>
     </div>
   );
