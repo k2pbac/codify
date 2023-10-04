@@ -1,0 +1,31 @@
+.calendar {
+  border-radius: 10px;
+  padding: 10px;
+  background: white;
+  width: 27%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.calendar svg {
+  font-size: 42px;
+}
+
+.calendar .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar .name p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.calendar .name span {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.4;
+}

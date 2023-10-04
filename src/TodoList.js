@@ -1,8 +1,8 @@
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ items }) => {
-  const collection = items.map((el) => {
-    return <TodoItem item={el}></TodoItem>;
+  const collection = items.map((el, id) => {
+    return <TodoItem key={id} item={el}></TodoItem>;
   });
   return (
     <div className="TodoList">
