@@ -38,12 +38,12 @@ const TodoList = ({ items }) => {
       <div>
         <Items currentItems={currentItems} />
         <ReactPaginate
-          nextLabel="next >"
+          nextLabel="Next >"
           onPageChange={handlePageClick}
           pageRangeDisplayed={3}
           marginPagesDisplayed={2}
           pageCount={pageCount}
-          previousLabel="< previous"
+          previousLabel="< Previous"
           pageClassName="page-item"
           pageLinkClassName="page-link"
           previousClassName="page-item"

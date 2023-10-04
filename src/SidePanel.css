@@ -1,0 +1,67 @@
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-panel .icons a {
+  all: unset;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  margin-left: 5px;
+}
+
+.side-panel .icons a:hover {
+  background-color: #af90eb;
+  border-radius: 10px;
+}
+
+.side-panel .icons a svg {
+  margin-right: 16px;
+  margin-left: 10px;
+  font-size: 40px;
+  padding: 8px;
+}
+
+.new-task {
+  position: relative;
+  height: 160px;
+  width: 160px;
+  background-color: #f1edfc;
+  border-radius: 10px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-task button {
+  position: absolute;
+  bottom: 15px;
+  background-color: #af90eb;
+  color: white;
+}
+
+.new-task button:hover {
+  color: white;
+}
+
+.new-task p {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+  color: black;
+  width: 75%;
+  text-align: center;
+}
+
+.new-task img {
+  width: 140px;
+  height: 140px;
+  top: -70px;
+  position: absolute;
+}
