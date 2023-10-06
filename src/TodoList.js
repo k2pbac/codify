@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
-import ReactPaginate from "react-paginate";
 
 const TodoList = ({ items }) => {
   const [currentItems, setCurrentItems] = useState(items);

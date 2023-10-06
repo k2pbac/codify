@@ -65,3 +65,11 @@
   top: -70px;
   position: absolute;
 }
+
+.modal {
+  color: black;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.401);
+}
