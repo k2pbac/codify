@@ -1,0 +1,41 @@
+.todo-item {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.todo-item.clicked .check-icon {
+  color: green;
+  text-decoration: line-through;
+}
+.todo-item.clicked p {
+  color: #10123f3d;
+  text-decoration: line-through;
+}
+
+.todo-item p {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item .todo-image {
+  margin-right: 6px;
+}
+
+.todo-item .check-icon,
+.todo-item .delete-icon {
+  font-size: 24px;
+  /* float: right; */
+}
+.delete-icon {
+  color: #ae2b2b;
+  margin-right: 10px;
+}
+
+.check-icon {
+  color: rgba(128, 128, 128, 0.486);
+  margin-right: 8px;
+}

@@ -1,5 +1,4 @@
 .TodoList {
-  /* margin: auto; */
   background-color: white;
   margin-left: 20px;
   border-radius: 10px;
@@ -7,6 +6,7 @@
   grid-area: list;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
+  overflow: auto;
 }
 
 .TodoList .search-container {
@@ -22,6 +22,8 @@
   right: 10px;
 }
 
-.todo .todo-image {
-  margin-right: 6px;
+.list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

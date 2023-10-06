@@ -7,7 +7,7 @@ import SidePanel from "./SidePanel";
 
 function App() {
   return (
-    <div className="Todo">
+    <div className="Codify">
       <SidePanel />
       <div className="main-section">
         <SearchBar />
