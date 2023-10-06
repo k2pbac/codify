@@ -1,7 +1,7 @@
 @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
-@import "./TodoItem.css";
-@import "./TodoList.css";
-@import "./App.css";
-@import "./Calendar.css";
-@import "./SearchBar.css";
-@import "./SidePanel.css";
+@import "./styles/TodoItem.css";
+@import "./styles/TodoList.css";
+@import "./styles/App.css";
+@import "./styles/Calendar.css";
+@import "./styles/SearchBar.css";
+@import "./styles/SidePanel.css";
