@@ -1,4 +1,4 @@
-import list from "./list.json";
+import list from "../list.json";
 import TodoList from "./TodoList";
 import Calendar from "./Calendar";
 import SearchBar from "./SearchBar";

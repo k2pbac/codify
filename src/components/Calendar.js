@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BsPersonCircle } from "react-icons/bs";
 import CTemplate from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./minicalendar.css";
+import "../styles/minicalendar.css";
 import { Text, Icon } from "@chakra-ui/react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
