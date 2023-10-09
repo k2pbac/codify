@@ -9,7 +9,6 @@ const TodoList = () => {
     list.map((el, index) => {
       const name = el.name.toLowerCase();
       const length = filter.length;
-      console.log(date, el.deadline);
       if (
         (name.substring(0, length) === filter || filter == "") &&
         date === el.deadline

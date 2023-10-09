@@ -4,9 +4,13 @@ import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { addTodoItem } from "../reducers/todoReducer";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
 const ItemModal = ({ show, handleClose }) => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
+  const { date } = useSelector((state) => state.todoItems);
+
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -48,8 +52,11 @@ const ItemModal = ({ show, handleClose }) => {
                     .toString(36)
                     .replace(/[^a-z]+/g, "")
                     .substr(2, 10),
+                  deadline: date,
+                  clicked: false,
                 })
               );
+              setName("");
               handleClose();
             }}
           >
