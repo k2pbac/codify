@@ -1,4 +1,4 @@
-import list from "../list.json";
+// import list from "../list.json";
 import TodoList from "./TodoList";
 import Calendar from "./Calendar";
 import SearchBar from "./SearchBar";
@@ -11,7 +11,7 @@ function App() {
       <SidePanel />
       <div className="main-section">
         <SearchBar />
-        <TodoList items={list}></TodoList>
+        <TodoList></TodoList>
         <Calendar />
       </div>
     </div>

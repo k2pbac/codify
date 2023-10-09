@@ -3,60 +3,70 @@
     "key": 1,
     "name": "Clean the dishes",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
     "key": 2,
     "name": "Do the laundry",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 1,
+    "key": 3,
     "name": "Clean the dishes",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 2,
+    "key": 4,
     "name": "Do the laundry",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 1,
+    "key": 5,
     "name": "Clean the dishes",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 2,
+    "key": 6,
     "name": "Do the laundry",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 1,
+    "key": 7,
     "name": "Clean the dishes",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 2,
+    "key": 8,
     "name": "Do the laundry",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 1,
+    "key": 9,
     "name": "Clean the dishes",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   },
   {
-    "key": 2,
+    "key": 10,
     "name": "Do the laundry",
     "type": "",
-    "deadline": ""
+    "deadline": "",
+    "clicked": false
   }
 ]
