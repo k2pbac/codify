@@ -3,13 +3,16 @@ import TodoItem from "./TodoItem";
 import { useSelector } from "react-redux";
 
 const TodoList = () => {
-  const { list, filter } = useSelector((state) => state.todoItems);
+  const { list, filter, date } = useSelector((state) => state.todoItems);
   const filteredList =
     list &&
     list.map((el, index) => {
       const name = el.name.toLowerCase();
       const length = filter.length;
-      if (name.substring(0, length) === filter || filter == "")
+      if (
+        (name.substring(0, length) === filter || filter == "") &&
+        date === el.deadline
+      )
         return (
           <TodoItem
             key={el.key}

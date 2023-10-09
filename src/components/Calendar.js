@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { updateDate } from "../reducers/todoReducer";
 import { BsPersonCircle } from "react-icons/bs";
 import CTemplate from "react-calendar";
 import "react-calendar/dist/Calendar.css";
@@ -8,13 +10,12 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const Calendar = (props) => {
   const { selectRange, ...rest } = props;
+  const dispatch = useDispatch();
   const [value, onChange] = useState(new Date());
 
-  const date = new Date();
-  const day = date.getDay();
-  const month = date.toLocaleString("default", { month: "long" });
-  const year = date.getFullYear();
-  const dateString = month + " " + day + ", " + year;
+  useEffect(() => {
+    dispatch(updateDate(value + ""));
+  }, [value]);
 
   return (
     <div className="calendar">

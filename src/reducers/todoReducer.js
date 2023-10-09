@@ -4,6 +4,7 @@ import list from "../list.json";
 const initialState = {
   list: [...list],
   filter: "",
+  date: new Date().toDateString() + "",
 };
 
 export const todoItems = createSlice({
@@ -11,6 +12,7 @@ export const todoItems = createSlice({
   initialState,
   reducers: {
     addTodoItem: (state, action) => {
+      console.log(action);
       state.list = [action.payload, ...state.list];
     },
     updateTodoItem: (state, action) => {
@@ -24,9 +26,13 @@ export const todoItems = createSlice({
     searchTodos: (state, action) => {
       state.filter = action.payload.toLowerCase();
     },
+    updateDate: (state, action) => {
+      state.date = new Date(action.payload).toDateString() + "";
+    },
   },
 });
 
-export const { addTodoItem, updateTodoItem, searchTodos } = todoItems.actions;
+export const { addTodoItem, updateTodoItem, searchTodos, updateDate } =
+  todoItems.actions;
 
 export default todoItems.reducer;
