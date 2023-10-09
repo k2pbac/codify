@@ -3,6 +3,7 @@ import list from "../list.json";
 
 const initialState = {
   list: [...list],
+  filter: "",
 };
 
 export const todoItems = createSlice({
@@ -20,9 +21,12 @@ export const todoItems = createSlice({
         return element;
       });
     },
+    searchTodos: (state, action) => {
+      state.filter = action.payload.toLowerCase();
+    },
   },
 });
 
-export const { addTodoItem, updateTodoItem } = todoItems.actions;
+export const { addTodoItem, updateTodoItem, searchTodos } = todoItems.actions;
 
 export default todoItems.reducer;

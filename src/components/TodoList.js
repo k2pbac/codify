@@ -3,21 +3,22 @@ import TodoItem from "./TodoItem";
 import { useSelector } from "react-redux";
 
 const TodoList = () => {
-  const todoData = useSelector((state) => state.todoItems.list);
-  console.log("creating items");
-  const list =
-    todoData &&
-    todoData.map((el, index) => {
-      console.log(el);
-      return (
-        <TodoItem
-          key={el.key}
-          index={el.key}
-          clicked={!!todoData && !!todoData[index]["clicked"]}
-          currentItems={todoData}
-          item={el}
-        ></TodoItem>
-      );
+  const { list, filter } = useSelector((state) => state.todoItems);
+  const filteredList =
+    list &&
+    list.map((el, index) => {
+      const name = el.name.toLowerCase();
+      const length = filter.length;
+      if (name.substring(0, length) === filter || filter == "")
+        return (
+          <TodoItem
+            key={el.key}
+            index={el.key}
+            clicked={!!list && !!list[index]["clicked"]}
+            currentItems={list}
+            item={el}
+          ></TodoItem>
+        );
     });
 
   return (
@@ -26,7 +27,7 @@ const TodoList = () => {
         <p>Tasks</p>
       </div>
       <div className="list-items">
-        <>{list}</>
+        <>{filteredList}</>
       </div>
     </div>
   );
