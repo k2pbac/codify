@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
+import { useSelector } from "react-redux";
 
-const TodoList = ({ items }) => {
-  const [currentItems, setCurrentItems] = useState(items);
+const TodoList = () => {
+  const todoData = useSelector((state) => state.todoItems.list);
+  console.log("creating items");
   const list =
-    currentItems &&
-    currentItems.map((el, index) => {
+    todoData &&
+    todoData.map((el, index) => {
+      console.log(el);
       return (
         <TodoItem
-          key={index}
-          index={index}
-          clicked={!!currentItems && !!currentItems[index]["clicked"]}
-          currentItems={currentItems}
-          setClicked={setCurrentItems}
+          key={el.key}
+          index={el.key}
+          clicked={!!todoData && !!todoData[index]["clicked"]}
+          currentItems={todoData}
           item={el}
         ></TodoItem>
       );

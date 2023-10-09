@@ -2,16 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./components/App";
-import allReducers from "./reducers/index";
 import { BrowserRouter } from "react-router-dom";
-import { createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
+import todoItems from "./reducers/todoReducer";
 
 //STORE - Global state for redux
-let store = createStore(
-  allReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+let store = configureStore({
+  reducer: { todoItems: todoItems },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

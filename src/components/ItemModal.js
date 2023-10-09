@@ -1,7 +1,12 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { useDispatch } from "react-redux";
+import { addTodoItem } from "../reducers/todoReducer";
+import { useState } from "react";
 const ItemModal = ({ show, handleClose }) => {
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -12,7 +17,12 @@ const ItemModal = ({ show, handleClose }) => {
           <Form>
             <Form.Group className="mb-3" controlId="taskForm">
               <Form.Label>Todo Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter Todo Item" />
+              <Form.Control
+                type="text"
+                placeholder="Enter Todo Item"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </Form.Group>
 
             {/* <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -28,7 +38,21 @@ const ItemModal = ({ show, handleClose }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button
+            variant="primary"
+            onClick={() => {
+              dispatch(
+                addTodoItem({
+                  name: name,
+                  key: Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, "")
+                    .substr(2, 10),
+                })
+              );
+              handleClose();
+            }}
+          >
             Create Task
           </Button>
         </Modal.Footer>
