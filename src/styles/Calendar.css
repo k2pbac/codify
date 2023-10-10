@@ -50,3 +50,13 @@
 .calendar.dark-mode .react-calendar__month-view__weekdays {
   background: #6d68687d;
 }
+
+.calendar.calendar.dark-mode .react-calendar__month-view__days__day {
+  color: white;
+}
+.calendar.calendar.dark-mode .react-calendar__month-view__days__day:hover {
+  color: #1b2559;
+}
+.calendar.calendar.dark-mode .react-calendar__tile--now {
+  color: black !important;
+}
