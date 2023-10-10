@@ -7,9 +7,14 @@ import ItemModal from "./ItemModal";
 
 const SidePanel = () => {
   const [show, setShow] = useState(false);
-
+  const [colorMode, setColorMode] = useState("Light");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const updateColorMode = () => {
+    if (colorMode == "Light") setColorMode("Dark");
+    else setColorMode("Light");
+  };
 
   return (
     <div className="side-panel">
@@ -27,9 +32,9 @@ const SidePanel = () => {
           Tasks
         </a>
         <div>
-          <input type="checkbox" id="switch" />
+          <input onChange={updateColorMode} type="checkbox" id="switch" />
           <label htmlFor="switch">Toggle</label>
-          Light mode
+          {colorMode} mode
         </div>
         {/* <a href="/">
           <LuSettings />
