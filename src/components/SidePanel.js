@@ -1,25 +1,30 @@
 import { useState } from "react";
-
+import { useDispatch } from "react-redux";
 import { GoHomeFill } from "react-icons/go";
 import { BsListTask, BsPlus } from "react-icons/bs";
-import { LuSettings } from "react-icons/lu";
 import ItemModal from "./ItemModal";
+import { updateMode } from "../reducers/styleReducer";
 
 const SidePanel = () => {
   const [show, setShow] = useState(false);
   const [colorMode, setColorMode] = useState("Light");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const dispatch = useDispatch();
   const updateColorMode = () => {
-    if (colorMode == "Light") setColorMode("Dark");
-    else setColorMode("Light");
+    if (colorMode == "Light") {
+      setColorMode("Dark");
+      dispatch(updateMode("dark-mode"));
+    } else {
+      setColorMode("Light");
+      dispatch(updateMode("light-mode"));
+    }
   };
 
   return (
     <div className="side-panel">
       <div className="logo">
-        <img src="./logo.png"></img>
+        <img src="./logo2.png"></img>
         <h1>Codify</h1>
       </div>
       <div className="icons">

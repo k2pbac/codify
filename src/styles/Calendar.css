@@ -2,7 +2,6 @@
   border-radius: 10px;
   padding: 10px;
   margin-right: 16px;
-  background: white;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -10,6 +9,16 @@
   flex-grow: 0.8;
   grid-area: calendar;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.calendar.dark-mode {
+  background-color: #6060607d;
+  color: white;
+}
+
+.calendar.light-mode {
+  background-color: white;
+  color: black;
 }
 
 .calendar svg {

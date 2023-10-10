@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateDate } from "../reducers/todoReducer";
 import { BsPersonCircle } from "react-icons/bs";
 import CTemplate from "react-calendar";
@@ -12,13 +12,13 @@ const Calendar = (props) => {
   const { selectRange, ...rest } = props;
   const dispatch = useDispatch();
   const [value, onChange] = useState(new Date());
-
+  const { mode } = useSelector((state) => state.style);
   useEffect(() => {
     dispatch(updateDate(value + ""));
   }, [value]);
 
   return (
-    <div className="calendar">
+    <div className={`calendar ${mode}`}>
       <div className="name">
         <BsPersonCircle />
         <p>Kris Bachan</p>

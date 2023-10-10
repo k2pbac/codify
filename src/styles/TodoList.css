@@ -1,5 +1,4 @@
 .TodoList {
-  background-color: white;
   margin-left: 20px;
   border-radius: 10px;
   padding: 20px;
@@ -7,6 +6,14 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   position: relative;
   overflow: auto;
+}
+.TodoList.dark-mode {
+  background-color: #6060607d;
+  color: white;
+}
+.TodoList.light-mode {
+  background-color: white;
+  color: black;
 }
 
 .TodoList .search-container {

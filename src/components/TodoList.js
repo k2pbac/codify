@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 
 const TodoList = () => {
   const { list, filter, date } = useSelector((state) => state.todoItems);
+  const { mode } = useSelector((state) => state.style);
+
   const filteredList =
     list &&
     list.map((el, index) => {
@@ -25,7 +27,7 @@ const TodoList = () => {
     });
 
   return (
-    <div className="TodoList">
+    <div className={`TodoList ${mode}`}>
       <div className="search-container">
         <p>Tasks</p>
       </div>
