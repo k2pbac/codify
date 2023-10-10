@@ -24,7 +24,9 @@ const SidePanel = () => {
   return (
     <div className="side-panel">
       <div className="logo">
-        <img src="./logo2.png"></img>
+        <img
+          src={`${colorMode == "Light" ? "./logo-light.png" : "./logo2.png"}`}
+        ></img>
         <h1>Codify</h1>
       </div>
       <div className="icons">

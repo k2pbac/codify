@@ -42,3 +42,11 @@
   font-weight: 400;
   opacity: 0.4;
 }
+
+.calendar.dark-mode .react-calendar__navigation__label__labelText {
+  color: #ffffff9c;
+}
+
+.calendar.dark-mode .react-calendar__month-view__weekdays {
+  background: #6d68687d;
+}

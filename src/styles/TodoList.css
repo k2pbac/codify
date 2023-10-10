@@ -23,6 +23,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+.TodoList.light-mode .search-container p {
+  color: black;
+}
+.TodoList.dark-mode .search-container p {
+  color: #ffffff9c;
+}
+
 .pagination {
   position: absolute;
   bottom: 0;
