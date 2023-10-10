@@ -1,5 +1,4 @@
 .TodoList {
-  background-color: white;
   margin-left: 20px;
   border-radius: 10px;
   padding: 20px;
@@ -8,12 +7,27 @@
   position: relative;
   overflow: auto;
 }
+.TodoList.dark-mode {
+  background-color: #6060607d;
+  color: white;
+}
+.TodoList.light-mode {
+  background-color: white;
+  color: black;
+}
 
 .TodoList .search-container {
   display: flex;
   font-size: 20px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
+}
+
+.TodoList.light-mode .search-container p {
+  color: black;
+}
+.TodoList.dark-mode .search-container p {
+  color: #ffffff9c;
 }
 
 .pagination {
@@ -26,4 +40,11 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.list-items .empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

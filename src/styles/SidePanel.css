@@ -14,6 +14,61 @@
   margin-left: 5px;
 }
 
+.side-panel .icons div {
+  all: unset;
+  cursor: pointer;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  width: 190px;
+  margin-left: 5px;
+}
+
+.side-panel [type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.side-panel label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 25px;
+  display: block;
+  border-radius: 50px;
+  position: relative;
+}
+
+.side-panel label:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.side-panel input + label {
+  background: #c671ca;
+}
+
+.side-panel input:checked + label {
+  background: #621b65;
+}
+
+.side-panel input:checked + label:after {
+  left: calc(100%);
+  transform: translateX(-100%);
+}
+
+.side-panel label:active:after {
+  width: 65px;
+}
+
 .side-panel .icons a:hover {
   background-color: #af90eb;
   border-radius: 10px;
@@ -23,6 +78,13 @@
   margin-right: 16px;
   margin-left: 10px;
   font-size: 40px;
+  padding: 8px;
+}
+
+.side-panel .icons div label {
+  margin-right: 16px;
+  margin-left: 10px;
+  /* font-size: 40px; */
   padding: 8px;
 }
 

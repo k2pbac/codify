@@ -12,7 +12,6 @@ export const todoItems = createSlice({
   initialState,
   reducers: {
     addTodoItem: (state, action) => {
-      console.log(action);
       state.list = [action.payload, ...state.list];
     },
     updateTodoItem: (state, action) => {

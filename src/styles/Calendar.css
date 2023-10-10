@@ -2,7 +2,6 @@
   border-radius: 10px;
   padding: 10px;
   margin-right: 16px;
-  background: white;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -10,6 +9,16 @@
   flex-grow: 0.8;
   grid-area: calendar;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.calendar.dark-mode {
+  background-color: #6060607d;
+  color: white;
+}
+
+.calendar.light-mode {
+  background-color: white;
+  color: black;
 }
 
 .calendar svg {
@@ -32,4 +41,22 @@
   font-size: 14px;
   font-weight: 400;
   opacity: 0.4;
+}
+
+.calendar.dark-mode .react-calendar__navigation__label__labelText {
+  color: #ffffff9c;
+}
+
+.calendar.dark-mode .react-calendar__month-view__weekdays {
+  background: #6d68687d;
+}
+
+.calendar.calendar.dark-mode .react-calendar__month-view__days__day {
+  color: white;
+}
+.calendar.calendar.dark-mode .react-calendar__month-view__days__day:hover {
+  color: #1b2559;
+}
+.calendar.calendar.dark-mode .react-calendar__tile--now {
+  color: black !important;
 }

@@ -1,7 +1,14 @@
 body {
-  background-color: #10123f;
-  color: white;
   font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.light-mode {
+  background-color: #5d75ad;
+}
+
+.dark-mode {
+  background-color: #10123f;
 }
 
 .Codify {
@@ -34,7 +41,6 @@ body {
   width: 90%;
   height: 700px;
   max-height: fit-content;
-  background-color: rgb(241, 245, 247);
   color: #10123f;
   margin-right: 10px;
   margin-left: 35px;
@@ -43,6 +49,15 @@ body {
   gap: 30px;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+.main-section.dark-mode {
+  background-color: rgb(99 105 109 / 57%);
+  color: white;
+}
+
+.main-section.light-mode {
+  background-color: rgb(241, 245, 247);
 }
 
 .main-section .content {
