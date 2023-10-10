@@ -26,10 +26,15 @@ const SidePanel = () => {
           <BsListTask />
           Tasks
         </a>
-        <a href="/">
+        <div>
+          <input type="checkbox" id="switch" />
+          <label htmlFor="switch">Toggle</label>
+          Light mode
+        </div>
+        {/* <a href="/">
           <LuSettings />
           Settings
-        </a>
+        </a> */}
       </div>
       <div className="new-task">
         <img src="./task.png" alt="new task button"></img>
