@@ -12,15 +12,7 @@ const Home = () => {
   const calculateTotalCompleted = () => {
     if (tasks.length == 0) return 100;
     const total = (completedTasks.length / tasks.length) * 100;
-    console.log(
-      tasks.length,
-      completedTasks.length,
-      completedTasks.length / tasks.length,
-      (completedTasks.length / tasks.length) * 100
-    );
-    // document
-    //   .getElementsByClassName("progressbar-percent")[0]
-    //   .setAttribute("content", total + "%");
+
     return total.toFixed(0);
   };
   return (
