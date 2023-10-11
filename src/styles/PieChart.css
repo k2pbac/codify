@@ -1,0 +1,32 @@
+.pie-chart,
+.column-chart {
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  grid-area: list;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  overflow: auto;
+  height: fit-content;
+}
+.pie-chart.dark-mode,
+.column-chart.dark-mode {
+  background-color: #6060607d;
+  color: white;
+}
+.pie-chart.light-mode,
+.column-chart.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.pie-chart {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+.column-chart {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}

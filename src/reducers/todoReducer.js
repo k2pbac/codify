@@ -4,7 +4,7 @@ import list from "../list.json";
 const initialState = {
   list: [...list],
   filter: "",
-  date: new Date().toDateString() + "",
+  date: new Date().toLocaleDateString() + "",
 };
 
 export const todoItems = createSlice({
@@ -26,7 +26,7 @@ export const todoItems = createSlice({
       state.filter = action.payload.toLowerCase();
     },
     updateDate: (state, action) => {
-      state.date = new Date(action.payload).toDateString() + "";
+      state.date = new Date(action.payload).toLocaleDateString() + "";
     },
   },
 });

@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { addTodoItem } from "../reducers/todoReducer";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-
+import { Redirect } from "react-router-dom";
 const ItemModal = ({ show, handleClose }) => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");

@@ -34,7 +34,7 @@ const SidePanel = () => {
           <GoHomeFill />
           Home
         </a>
-        <a href="/">
+        <a href="/tasks">
           <BsListTask />
           Tasks
         </a>

@@ -6,7 +6,8 @@ import SearchBar from "./SearchBar";
 import SidePanel from "./SidePanel";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
-
+import { Switch, Route } from "react-router-dom";
+import Home from "./Home";
 function App() {
   const { mode } = useSelector((state) => state.style);
   useEffect(() => {
@@ -23,7 +24,10 @@ function App() {
       <SidePanel />
       <div className={`main-section ${mode}`}>
         <SearchBar />
-        <TodoList></TodoList>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/tasks" component={TodoList} />
+        </Switch>
         <Calendar />
       </div>
     </div>
