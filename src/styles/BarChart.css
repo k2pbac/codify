@@ -1,0 +1,85 @@
+.bar-chart {
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 8px;
+  grid-area: list;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: relative;
+  overflow: auto;
+  height: fit-content;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.bar-chart.dark-mode {
+  background-color: #6060607d;
+  color: white;
+}
+.bar-chart.light-mode {
+  background-color: white;
+  color: black;
+}
+.bar-chart.dark-mode caption {
+  color: white;
+}
+/* Chart */
+.bar-chart.light-mode td {
+  background-color: #f1edfc !important;
+  color: black;
+}
+.bar-chart.dark-mode td {
+  background-color: #5d75ad !important;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.15rem 0.5rem;
+  background: rgb(17 21 36 / 30%);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.75rem;
+  &:has(:focus-visible) {
+    outline: 3px solid rgb(17 21 36 / 50%);
+  }
+}
+.tabs-marker {
+  position: absolute;
+  z-index: -1;
+  background: rgb(17 21 36 / 70%);
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: 0;
+  border-radius: 0.4rem;
+  transition: 0.15s;
+}
+.tabs-tab {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  transition: all 150ms;
+  outline-width: 2px;
+  outline-offset: 2px;
+  padding: 0px;
+  border-width: 0;
+  color: inherit;
+  font-weight: 500;
+  padding: 1rem;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &.ui-active {
+    pointer-events: none;
+    color: rgba(255, 255, 255, 1);
+  }
+}

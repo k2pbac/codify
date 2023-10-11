@@ -5,17 +5,15 @@ import { useSelector } from "react-redux";
 const TodoList = () => {
   const { list, filter, date } = useSelector((state) => state.todoItems);
   const { mode } = useSelector((state) => state.style);
-  console.log(list);
+
   const filteredList =
     list &&
-    list.map((el, index) => {
+    list.reduce((acc, el, index) => {
       const name = el.name.toLowerCase();
       const length = filter.length;
-      if (
-        (name.substring(0, length) === filter || filter == "") &&
-        date === el.deadline
-      )
-        return (
+      (name.substring(0, length) === filter || filter == "") &&
+        date === el.deadline &&
+        acc.push(
           <TodoItem
             key={el.key}
             index={el.key}
@@ -24,8 +22,9 @@ const TodoList = () => {
             item={el}
           ></TodoItem>
         );
-    });
-  console.log(filteredList, filteredList.length);
+      return acc;
+    }, []);
+
   return (
     <div className={`TodoList ${mode}`}>
       <div className="search-container">
@@ -33,7 +32,7 @@ const TodoList = () => {
       </div>
       <div className="list-items">
         <>
-          {!!filteredList[0] ? (
+          {!!filteredList.some((el) => !!el) ? (
             filteredList
           ) : (
             <p className="empty">Nothing to show yet...</p>

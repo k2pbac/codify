@@ -1,8 +1,7 @@
 import { useDispatch } from "react-redux";
 import { searchTodos } from "../reducers/todoReducer";
 import { BsSearch } from "react-icons/bs";
-import { GoBell } from "react-icons/go";
-import { LuSettings } from "react-icons/lu";
+import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -18,6 +17,10 @@ const SearchBar = () => {
           placeholder="Search something..."
           onChange={(e) => {
             dispatch(searchTodos(e.target.value));
+          }}
+          onKeyUp={(e) => {
+            if (e.key === "Enter")
+              return window.location.replace("/tasks/:task");
           }}
         />
       </div>

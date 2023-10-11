@@ -5,3 +5,6 @@
 @import "./styles/Calendar.css";
 @import "./styles/SearchBar.css";
 @import "./styles/SidePanel.css";
+@import "./styles/Home.css";
+@import "./styles/BarChart.css";
+@import "./styles/PieChart.css";
