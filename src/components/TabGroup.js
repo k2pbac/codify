@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import styled from "styled-components";
-
+import { updatePeriod } from "../reducers/chartReducer";
 const Tab = styled.button`
   font-size: 12px;
   padding: 10px 10px;
@@ -22,9 +22,16 @@ const ButtonGroup = styled.div`
 `;
 const types = ["Yearly", "Monthly"];
 function TabGroup() {
+  const dispatch = useDispatch();
   const { mode } = useSelector((state) => state.style);
+  const { period } = useSelector((state) => state.chart);
+  const [active, setActive] = useState(types[1]);
 
-  const [active, setActive] = useState(types[0]);
+  const handleTabChange = (type) => {
+    setActive(type);
+    if (period === "monthly") dispatch(updatePeriod("yearly"));
+    else dispatch(updatePeriod("monthly"));
+  };
   return (
     <>
       <ButtonGroup className={`button-group ${mode}`}>
@@ -32,7 +39,7 @@ function TabGroup() {
           <Tab
             key={type}
             $active={active === type ? 1 : 0}
-            onClick={() => setActive(type)}
+            onClick={() => handleTabChange(type)}
           >
             {type}
           </Tab>

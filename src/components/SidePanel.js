@@ -25,7 +25,7 @@ const SidePanel = () => {
     <div className="side-panel">
       <div className="logo">
         <img
-          src={`${colorMode == "Light" ? "./logo-light.png" : "./logo2.png"}`}
+          src={`${colorMode == "Light" ? "/logo-light.png" : "/logo2.png"}`}
         ></img>
         <h1>Codify</h1>
       </div>
@@ -49,7 +49,7 @@ const SidePanel = () => {
         </a> */}
       </div>
       <div className="new-task">
-        <img src="./task.png" alt="new task button"></img>
+        <img src="/task.png" alt="new task button"></img>
         <p>Add a new task to your list</p>
         <button type="button" className="btn" onClick={handleShow}>
           <BsPlus />

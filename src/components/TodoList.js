@@ -1,18 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoItem from "./TodoItem";
 import { useSelector } from "react-redux";
 
-const TodoList = () => {
+const TodoList = (props) => {
   const { list, filter, date } = useSelector((state) => state.todoItems);
   const { mode } = useSelector((state) => state.style);
+  const term =
+    props && props.match && props.match.params
+      ? props.match.params["term"]
+      : "";
 
   const filteredList =
     list &&
     list.reduce((acc, el, index) => {
       const name = el.name.toLowerCase();
-      const length = filter.length;
-      (name.substring(0, length) === filter || filter == "") &&
-        date === el.deadline &&
+      const length = filter.length == 0 && term ? term.length : filter.length;
+      if (
+        (name.substring(0, length) === filter ||
+          name.substring(0, length) === term ||
+          (filter == "" && term == "")) &&
+        date === el.deadline
+      ) {
         acc.push(
           <TodoItem
             key={el.key}
@@ -22,6 +30,8 @@ const TodoList = () => {
             item={el}
           ></TodoItem>
         );
+      }
+
       return acc;
     }, []);
 

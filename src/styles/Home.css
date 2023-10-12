@@ -58,7 +58,7 @@ div[role="progressbar"]::before {
 
 .daily-container {
   display: flex;
-  /* gap: 40px; */
+  gap: 10px;
   max-width: 550px;
   width: 100%;
   justify-content: space-between;
@@ -75,6 +75,7 @@ div[role="progressbar"]::before {
   font-weight: 700;
   font-size: 14px;
   justify-content: center;
+  max-width: 290px;
 }
 .current-task {
   flex-grow: 0.8;
