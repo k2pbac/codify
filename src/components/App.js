@@ -26,6 +26,7 @@ function App() {
         <SearchBar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/tasks/:term" component={TodoList} />
           <Route path="/tasks" component={TodoList} />
         </Switch>
         <Calendar />

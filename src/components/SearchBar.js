@@ -1,12 +1,12 @@
-import { useDispatch } from "react-redux";
 import { searchTodos } from "../reducers/todoReducer";
 import { BsSearch } from "react-icons/bs";
 import { Redirect } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useState } from "react";
 const SearchBar = () => {
   const dispatch = useDispatch();
   const { mode } = useSelector((state) => state.style);
-
+  const [term, setTerm] = useState("");
   return (
     <div className="search-bar">
       <div id="search-wrapper" className={`${mode}`}>
@@ -17,10 +17,13 @@ const SearchBar = () => {
           placeholder="Search something..."
           onChange={(e) => {
             dispatch(searchTodos(e.target.value));
+            setTerm(e.target.value);
           }}
           onKeyUp={(e) => {
-            if (e.key === "Enter")
-              return window.location.replace("/tasks/:task");
+            if (e.key === "Enter") {
+              dispatch(searchTodos(e.target.value));
+              return window.location.replace(`/tasks/${term}`);
+            }
           }}
         />
       </div>

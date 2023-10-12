@@ -7,10 +7,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import todoItems from "./reducers/todoReducer";
 import style from "./reducers/styleReducer";
+import chart from "./reducers/chartReducer";
 
 //STORE - Global state for redux
 let store = configureStore({
-  reducer: { todoItems: todoItems, style: style },
+  reducer: { todoItems, style, chart },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
