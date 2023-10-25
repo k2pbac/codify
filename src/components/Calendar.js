@@ -9,13 +9,13 @@ import { Text, Icon } from "@chakra-ui/react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 const Calendar = (props) => {
-  const { selectRange, ...rest } = props;
+  const { selectRange } = props;
   const dispatch = useDispatch();
   const [value, onChange] = useState(new Date());
   const { mode } = useSelector((state) => state.style);
   useEffect(() => {
     dispatch(updateDate(value + ""));
-  }, [value]);
+  }, [value, dispatch]);
 
   return (
     <div className={`calendar ${mode}`}>

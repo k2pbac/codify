@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import TodoItem from "./TodoItem";
 import { useSelector } from "react-redux";
 
@@ -14,11 +14,11 @@ const TodoList = (props) => {
     list &&
     list.reduce((acc, el, index) => {
       const name = el.name.toLowerCase();
-      const length = filter.length == 0 && term ? term.length : filter.length;
+      const length = filter.length === 0 && term ? term.length : filter.length;
       if (
         (name.substring(0, length) === filter ||
           name.substring(0, length) === term ||
-          (filter == "" && term == "")) &&
+          (filter === "" && term === "")) &&
         date === el.deadline
       ) {
         acc.push(

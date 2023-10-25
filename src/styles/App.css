@@ -68,3 +68,28 @@ body {
   display: flex;
   height: 600px;
 }
+
+@media only screen and (max-width: 600px) {
+  .Codify {
+    flex-direction: column;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: -60px;
+  }
+  .main-section {
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  .main-section .calendar {
+    margin: 0;
+  }
+}

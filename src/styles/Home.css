@@ -157,3 +157,20 @@ div[role="progressbar"]::before {
 .button-group {
   background-color: transparent;
 }
+
+@media only screen and (max-width: 600px) {
+  .progress-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .progress-container div[role="progressbar"] {
+    --size: 6rem;
+  }
+
+  .legend {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}

@@ -1,8 +1,6 @@
 import { useDispatch } from "react-redux";
 import { updateTodoItem } from "../reducers/todoReducer";
-import { AiOutlineCheckSquare, AiFillDelete } from "react-icons/ai";
-import { BsFillCheckCircleFill } from "react-icons/bs";
-import { MdDelete, MdCheckCircle } from "react-icons/md";
+import { MdCheckCircle } from "react-icons/md";
 
 const TodoItem = ({ item, clicked = false, index }) => {
   const dispatch = useDispatch();
@@ -15,7 +13,6 @@ const TodoItem = ({ item, clicked = false, index }) => {
         <MdCheckCircle className="check-icon" />
         {item.name}
       </p>
-      {/* <MdDelete className="delete-icon" /> */}
     </div>
   );
 };

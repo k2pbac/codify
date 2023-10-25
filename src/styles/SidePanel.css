@@ -135,3 +135,20 @@
 .modal-backdrop {
   background-color: rgba(0, 0, 0, 0.401);
 }
+
+@media only screen and (max-width: 600px) {
+  .side-panel .icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .hide-desktop {
+    display: none;
+  }
+}

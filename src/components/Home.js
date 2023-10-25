@@ -4,13 +4,13 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const Home = () => {
   const { mode } = useSelector((state) => state.style);
-  const { list, filter, date } = useSelector((state) => state.todoItems);
+  const { list, date } = useSelector((state) => state.todoItems);
   const tasks = list.filter((el) => date === el.deadline);
   const completedTasks = tasks.filter((el) => el.clicked);
   const currentTask = tasks[0];
 
   const calculateTotalCompleted = () => {
-    if (tasks.length == 0) return 100;
+    if (tasks.length === 0) return 100;
     const total = (completedTasks.length / tasks.length) * 100;
 
     return total.toFixed(0);
