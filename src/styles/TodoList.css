@@ -48,3 +48,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media only screen and (max-width: 600px) {
+  .list-items {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .list-items .empty {
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+  .TodoList {
+    margin-left: 0;
+  }
+}

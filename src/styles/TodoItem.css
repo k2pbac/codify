@@ -3,6 +3,7 @@
   padding: 20px;
   border-radius: 20px;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .todo-item.clicked .check-icon {
@@ -28,6 +29,7 @@
 .todo-item .check-icon,
 .todo-item .delete-icon {
   font-size: 24px;
+  min-width: 24px;
   /* float: right; */
 }
 .delete-icon {

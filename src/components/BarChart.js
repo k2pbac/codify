@@ -2,7 +2,11 @@ import "charts.css";
 import { useSelector } from "react-redux";
 import TabGroup from "./TabGroup";
 import { filterListByMonth, filterListByYear } from "../helpers/filter";
+import { useState } from "react";
 const BarChart = () => {
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 600px)").matches
+  );
   const { list } = useSelector((state) => state.todoItems);
   const { mode } = useSelector((state) => state.style);
   const { period } = useSelector((state) => state.chart);
@@ -37,7 +41,7 @@ const BarChart = () => {
               let temp = 0.1 * (el / length);
               return (
                 <tr key={Math.random() * 100}>
-                  <th scope="row">{months[i]} </th>
+                  {matches && <th scope="row">{months[i]} </th>}
                   <td style={{ "--start": 0, "--end": temp }}></td>
                 </tr>
               );
@@ -47,7 +51,7 @@ const BarChart = () => {
               let temp = 0.1 * (barChartValues[el] / length);
               return (
                 <tr key={Math.random() * 100}>
-                  <th scope="row">{el} </th>
+                  {matches && <th scope="row">{el} </th>}
                   <td style={{ "--start": 0, "--end": temp }}></td>
                 </tr>
               );

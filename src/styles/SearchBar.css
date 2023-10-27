@@ -15,7 +15,7 @@
   width: 100%;
   display: flex;
   border: 1px solid transparent;
-  align-items: stretch;
+  align-items: center;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -80,4 +80,10 @@
   background-color: #3b3b34 !important;
   border-color: #3b3b34 !important;
   color: white !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-bar {
+    margin-left: 0;
+  }
 }
