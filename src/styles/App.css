@@ -3,12 +3,8 @@ body {
   color: white;
 }
 
-.light-mode {
+body.light-mode {
   background-color: #5d75ad;
-}
-
-.dark-mode {
-  background-color: #10123f;
 }
 
 .Codify {
@@ -55,11 +51,6 @@ body {
   padding-bottom: 40px;
 }
 
-.main-section.dark-mode {
-  background-color: rgb(99 105 109 / 57%);
-  color: white;
-}
-
 .main-section.light-mode {
   background-color: rgb(241, 245, 247);
 }
@@ -67,6 +58,16 @@ body {
 .main-section .content {
   display: flex;
   height: 600px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.dark-mode {
+    background-color: #10123f;
+  }
+  body.dark-mode .main-section {
+    background-color: rgb(99 105 109 / 57%);
+    color: white;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -82,7 +83,7 @@ body {
   }
   .main-section {
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     height: 100%;

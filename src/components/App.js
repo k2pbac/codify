@@ -4,21 +4,45 @@ import Calendar from "./Calendar";
 import SearchBar from "./SearchBar";
 
 import SidePanel from "./SidePanel";
-import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 function App() {
-  const { mode } = useSelector((state) => state.style);
-  useEffect(() => {
-    if (document.body.classList.contains("light-mode")) {
+  const [mode, setMode] = useState("light-mode");
+  const onSelectMode = (mode) => {
+    setMode(mode);
+    if (mode === "dark") {
+      document.body.classList.add("dark-mode");
       document.body.classList.remove("light-mode");
-      document.body.classList.add(mode);
     } else {
+      document.body.classList.add("light-mode");
       document.body.classList.remove("dark-mode");
-      document.body.classList.add(mode);
     }
-  }, [mode]);
+  };
+
+  useEffect(() => {
+    // Add listener to update styles
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) =>
+        onSelectMode(e.matches ? "dark" : "light")
+      );
+
+    // Setup dark/light mode for the first time
+    onSelectMode(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    );
+
+    // Remove listener
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", () => {});
+    };
+  }, []);
+
   const [path, setPath] = useState(window.location.pathname);
 
   useEffect(() => {
@@ -30,7 +54,7 @@ function App() {
   );
   return (
     <div className={`Codify`}>
-      <SidePanel />
+      <SidePanel mode={mode} />
       <div className={`main-section ${mode}`}>
         <SearchBar />
         {!path.includes("tasks") && !matches && <Calendar />}

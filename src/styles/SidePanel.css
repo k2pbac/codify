@@ -140,10 +140,18 @@
   .side-panel .icons {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 20px;
+    justify-content: space-around;
   }
 
   .hide-mobile {
     display: none;
+  }
+  .side-panel .icons a {
+    width: fit-content !important;
+  }
+  .side-panel .icons a:last-of-type {
+    margin-bottom: 0;
   }
 }
 

@@ -3,7 +3,6 @@ import BarChart from "./BarChart";
 import { BsArrowRightShort } from "react-icons/bs";
 
 const Home = () => {
-  const { mode } = useSelector((state) => state.style);
   const { list, date } = useSelector((state) => state.todoItems);
   const tasks = list.filter((el) => date === el.deadline);
   const completedTasks = tasks.filter((el) => el.clicked);
@@ -18,7 +17,7 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="daily-container">
-        <div className={`current-task ${mode}`}>
+        <div className={`current-task`}>
           {currentTask ? (
             <p>
               <span>Current task:</span> {currentTask.name}
@@ -30,7 +29,7 @@ const Home = () => {
             Go to tasks <BsArrowRightShort />
           </a>
         </div>
-        <div className={`progress-container ${mode}`}>
+        <div className={`progress-container`}>
           <p>Today's Progress</p>
           <div
             className="progressbar-percent"

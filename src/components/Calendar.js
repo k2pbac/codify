@@ -12,13 +12,12 @@ const Calendar = (props) => {
   const { selectRange } = props;
   const dispatch = useDispatch();
   const [value, onChange] = useState(new Date());
-  const { mode } = useSelector((state) => state.style);
   useEffect(() => {
     dispatch(updateDate(value + ""));
   }, [value, dispatch]);
 
   return (
-    <div className={`calendar ${mode}`}>
+    <div className={`calendar`}>
       <div className="name">
         <BsPersonCircle />
         <p>Kris Bachan</p>

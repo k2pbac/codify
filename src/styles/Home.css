@@ -42,13 +42,9 @@
   color: var(--fg);
 }
 
-.progress-container.light-mode div[role="progressbar"] {
+body.light-mode .progress-container div[role="progressbar"] {
   --fg: #5d75ad;
   --bg: #f1edfc;
-}
-.progress-container.dark-mode div[role="progressbar"] {
-  --fg: #10123f;
-  --bg: #5d75ad;
 }
 
 div[role="progressbar"]::before {
@@ -85,30 +81,19 @@ div[role="progressbar"]::before {
   margin-right: 3px;
   letter-spacing: 0.5px;
 }
-.current-task.light-mode a {
+body.light-mode .current-task a {
   text-decoration: none;
   color: #5d75ad;
 }
-.current-task.dark-mode a {
-  text-decoration: none;
-  color: #abadea;
-}
-.progress-container.light-mode p {
+
+body.light-mode .progress-container p {
   color: #6c757d;
 }
-.progress-container.dark-mode p {
-  color: white;
-}
-.progress-container.light-mode,
-.current-task.light-mode {
+
+body.light-mode .progress-container,
+body.light-mode .current-task {
   background-color: white;
   color: black;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-.progress-container.dark-mode,
-.current-task.dark-mode {
-  background-color: #6060607d;
-  color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -129,27 +114,15 @@ div[role="progressbar"]::before {
   margin: 2px;
 }
 /* legend colors */
-.progress-container.light-mode .legend .complete {
+body.light-mode .progress-container .legend .complete {
   background-color: #5d75ad;
 }
-.progress-container.light-mode .legend .in-progress {
+body.light-mode .progress-container .legend .in-progress {
   background-color: #f1edfc;
 }
-.progress-container.dark-mode .legend .complete {
-  background-color: #10123f;
-}
-.progress-container.dark-mode .legend .in-progress {
-  background-color: #5d75ad;
-}
-
 /* Button group */
 
-.button-group.dark-mode button {
-  background: transparent;
-  color: white;
-}
-
-.button-group.light-mode button {
+body.light-mode .button-group button {
   background-color: white;
   color: initial;
 }
@@ -172,5 +145,36 @@ div[role="progressbar"]::before {
     justify-content: center;
     align-items: center;
     padding: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body.dark-mode .progress-container div[role="progressbar"] {
+    --fg: #10123f;
+    --bg: #5d75ad;
+  }
+  body.dark-mode .current-task a {
+    text-decoration: none;
+    color: #abadea;
+  }
+  body.dark-mode .progress-container p {
+    color: white;
+  }
+  body.dark-mode .progress-container,
+  body.dark-mode .current-task {
+    background-color: #6060607d;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  body.dark-mode .progress-container .legend .complete {
+    background-color: #10123f;
+  }
+  body.dark-mode .progress-container .legend .in-progress {
+    background-color: #5d75ad;
+  }
+  body.dark-mode .button-group button {
+    background: transparent;
+    color: white;
   }
 }

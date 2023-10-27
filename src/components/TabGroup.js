@@ -19,11 +19,11 @@ const Tab = styled.button`
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: row-reverse;
+  padding-bottom: 20px;
 `;
 const types = ["Yearly", "Monthly"];
 function TabGroup() {
   const dispatch = useDispatch();
-  const { mode } = useSelector((state) => state.style);
   const { period } = useSelector((state) => state.chart);
   const [active, setActive] = useState(types[1]);
 
@@ -34,7 +34,7 @@ function TabGroup() {
   };
   return (
     <>
-      <ButtonGroup className={`button-group ${mode}`}>
+      <ButtonGroup className={`button-group`}>
         {types.map((type) => (
           <Tab
             key={type}

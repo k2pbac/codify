@@ -9,13 +9,8 @@
   overflow: auto;
   height: fit-content;
 }
-.pie-chart.dark-mode,
-.column-chart.dark-mode {
-  background-color: #6060607d;
-  color: white;
-}
-.pie-chart.light-mode,
-.column-chart.light-mode {
+body.light-mode .pie-chart,
+body.light-mode .column-chart {
   background-color: white;
   color: black;
 }
@@ -29,4 +24,11 @@
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
+}
+@media (prefers-color-scheme: dark) {
+  body.dark-mode .pie-chart,
+  body.dark-mode .column-chart {
+    background-color: #6060607d;
+    color: white;
+  }
 }

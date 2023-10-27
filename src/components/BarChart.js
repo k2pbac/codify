@@ -8,7 +8,6 @@ const BarChart = () => {
     window.matchMedia("(min-width: 600px)").matches
   );
   const { list } = useSelector((state) => state.todoItems);
-  const { mode } = useSelector((state) => state.style);
   const { period } = useSelector((state) => state.chart);
   const months = [
     "Jan",
@@ -31,7 +30,7 @@ const BarChart = () => {
       ? barChartValues.length
       : Object.keys(barChartValues).length;
   return (
-    <div className={`bar-chart ${mode}`}>
+    <div className={`bar-chart`}>
       <TabGroup />
       <table className="charts-css column show-heading show-labels show-x-axes data-spacing-1">
         <caption> Completed Tasks </caption>

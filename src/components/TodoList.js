@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 const TodoList = (props) => {
   const { list, filter, date } = useSelector((state) => state.todoItems);
-  const { mode } = useSelector((state) => state.style);
   const term =
     props && props.match && props.match.params
       ? props.match.params["term"]
@@ -36,7 +35,7 @@ const TodoList = (props) => {
     }, []);
 
   return (
-    <div className={`TodoList ${mode}`}>
+    <div className={`TodoList`}>
       <div className="search-container">
         <p>Tasks</p>
       </div>

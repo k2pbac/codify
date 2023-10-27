@@ -7,11 +7,7 @@
   position: relative;
   overflow: auto;
 }
-.TodoList.dark-mode {
-  background-color: #6060607d;
-  color: white;
-}
-.TodoList.light-mode {
+body.light-mode .TodoList {
   background-color: white;
   color: black;
 }
@@ -23,11 +19,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-.TodoList.light-mode .search-container p {
+body.light-mode .TodoList .search-container p {
   color: black;
-}
-.TodoList.dark-mode .search-container p {
-  color: #ffffff9c;
 }
 
 .pagination {
@@ -62,5 +55,15 @@
   }
   .TodoList {
     margin-left: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body.dark-mode .TodoList {
+    background-color: #6060607d;
+    color: white;
+  }
+  body.dark-mode .TodoList .search-container p {
+    color: #ffffff9c;
   }
 }

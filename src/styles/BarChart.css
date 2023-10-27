@@ -12,24 +12,14 @@
   max-width: 550px;
   margin: 0 auto;
 }
-.bar-chart.dark-mode {
-  background-color: #6060607d;
-  color: white;
-}
-.bar-chart.light-mode {
+body.light-mode .bar-chart {
   background-color: white;
   color: black;
 }
-.bar-chart.dark-mode caption {
-  color: white;
-}
 /* Chart */
-.bar-chart.light-mode td {
-  background-color: #f1edfc !important;
+body.light-mode .bar-chart td {
+  background-color: #c0a5d7 !important;
   color: black;
-}
-.bar-chart.dark-mode td {
-  background-color: #5d75ad !important;
 }
 .tabs {
   display: flex;
@@ -81,5 +71,18 @@
   &.ui-active {
     pointer-events: none;
     color: rgba(255, 255, 255, 1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body.dark-mode .bar-chart {
+    background-color: #6060607d;
+    color: white;
+  }
+  body.dark-mode .bar-chart caption {
+    color: white;
+  }
+  body.dark-mode .bar-chart td {
+    background-color: #5d75ad !important;
   }
 }

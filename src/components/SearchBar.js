@@ -5,11 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 const SearchBar = () => {
   const dispatch = useDispatch();
-  const { mode } = useSelector((state) => state.style);
   const [term, setTerm] = useState("");
   return (
     <div className="search-bar">
-      <div id="search-wrapper" className={`${mode}`}>
+      <div id="search-wrapper">
         <BsSearch className="search-icon" />
         <input
           type="text"
