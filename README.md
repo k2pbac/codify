@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Codify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1440" alt="Screenshot 2023-10-27 at 10 29 29 AM" src="https://github.com/k2pbac/codify/assets/68387975/73fe098d-436b-41e8-aff6-9ea4291f21db">
 
 ## Available Scripts
 
